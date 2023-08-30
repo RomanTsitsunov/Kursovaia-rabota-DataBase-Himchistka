@@ -1,0 +1,125 @@
+package com.example.himchistka.controller;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ResourceBundle;
+
+import com.example.himchistka.BD_connection;
+import com.example.himchistka.HelloApplication;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+public class LoginController {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private Button LoginSignIn_Button;
+
+    @FXML
+    private Button LoginSignUp_Button;
+
+    @FXML
+    private TextField Login_Field;
+
+    @FXML
+    private PasswordField Password_Field;
+
+    @FXML
+    private Label WarningEmptyField_Label;
+
+    @FXML
+    private Label WarningWrongDate_Label;
+
+    @FXML
+    void initialize()
+    {
+        LoginSignIn_Button.setOnAction(event ->
+        {
+            WarningEmptyField_Label.visibleProperty().set(false);
+            WarningWrongDate_Label.visibleProperty().set(false);
+            if(Login_Field.getText().isEmpty()||Password_Field.getText().isEmpty())
+                WarningEmptyField_Label.visibleProperty().set(true);
+            else
+            {
+                Connection con;
+                try {
+                    con = BD_connection.get_connection();
+                    Statement st = con.createStatement();
+                    ResultSet res=st.executeQuery("select * from employer where login='" +
+                            Login_Field.getText()+"' and password='" +
+                            Password_Field.getText()+"'");
+                    if(res.next())
+                    {
+                        LoginSignIn_Button.getScene().getWindow().hide();
+                        FXMLLoader Loader = new FXMLLoader();
+                        Loader.setLocation(getClass().getResource
+                                ("/com/example/himchistka/Main-Panel.fxml"));
+                        try {
+                            Loader.load();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        Parent root= Loader.getRoot();
+                        Stage stage=new Stage();
+                        Scene scene = null;
+                        scene = new Scene(root, 600, 450);
+                        InputStream iconStream=getClass().getResourceAsStream("/icon.jpg");
+                        Image image = new Image(iconStream);
+                        stage.getIcons().add(image);
+                        stage.setTitle
+                                (res.getString(7));
+                        stage.setScene(scene);
+                        stage.show();
+                    }
+                    else
+                        WarningWrongDate_Label.visibleProperty().set(true);
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+        );
+
+        LoginSignUp_Button.setOnAction(event ->
+        {
+            //LoginSignUp_Button.getScene().getWindow().hide();
+            FXMLLoader Loader = new FXMLLoader();
+            Loader.setLocation(getClass().getResource
+                    ("/com/example/himchistka/Registration-Panel.fxml"));
+            try {
+                Loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            Parent root= Loader.getRoot();
+            Stage stage=new Stage();
+            Scene scene = null;
+            scene = new Scene(root, 600, 450);
+            InputStream iconStream=getClass().getResourceAsStream("/icon.jpg");
+            Image image = new Image(iconStream);
+            stage.getIcons().add(image);
+            stage.setTitle("Регистрация");
+            stage.setScene(scene);
+            stage.show();
+        }
+        );
+    }
+}

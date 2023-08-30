@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.MainController">
+    <children>
+        <AnchorPane fx:id="Anchor" layoutY="93.0" prefHeight="408.0" prefWidth="600.0" style="-fx-background-color: #add8e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="200.0" layoutY="101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../../icon.jpg" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+         </children></AnchorPane>
+      <Label layoutX="174.0" layoutY="25.0" text="Химчистка" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="48.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="221.0" AnchorPane.bottomAnchor="475.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Справочники">
+            <items>
+                  <MenuItem fx:id="Pollution_MenuItem" mnemonicParsing="false" text="Загрязнения" />
+                  <MenuItem fx:id="Defect_MenuItem" mnemonicParsing="false" text="Дефекты" />
+                  <MenuItem fx:id="Accessories_MenuItem" mnemonicParsing="false" text="Фурнитура" />
+                  <MenuItem fx:id="Colour_MenuItem" mnemonicParsing="false" text="Цвет" />
+                  <MenuItem fx:id="Material_MenuItem" mnemonicParsing="false" text="Материал" />
+                  <MenuItem fx:id="Marking_MenuItem" mnemonicParsing="false" text="Маркировка" />
+                  <MenuItem fx:id="ReceivingIssuingPoint_MenuItem" mnemonicParsing="false" text="Пункты приема-выдачи заказов" />
+                  <MenuItem fx:id="Service_MenuItem" mnemonicParsing="false" text="Услуги" />
+                  <MenuItem fx:id="ProductType_MenuItem" mnemonicParsing="false" text="Виды изделий" />
+                  <MenuItem fx:id="Supplier_MenuItem" mnemonicParsing="false" text="Поставщики" />
+                  <MenuItem fx:id="PriceList_MenuItem" mnemonicParsing="false" text="Прайс-лист" />
+                  <MenuItem fx:id="OrderUrgency_MenuItem" mnemonicParsing="false" text="Срочность заказа" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Таблицы с данными">
+            <items>
+                  <MenuItem fx:id="Contract_MenuItem" mnemonicParsing="false" text="Договоры" />
+                  <MenuItem fx:id="Customer_MenuItem" mnemonicParsing="false" text="Заказчики" />
+                  <MenuItem fx:id="Employer_MenuItem" mnemonicParsing="false" text="Сотрудники" />
+                  <MenuItem fx:id="Orders_MenuItem" mnemonicParsing="false" text="Заказы" />
+                  <MenuItem fx:id="Storage_MenuItem" mnemonicParsing="false" text="Склад" />
+                  <MenuItem fx:id="Supply_MenuItem" mnemonicParsing="false" text="Поставка" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Отчеты">
+            <items>
+                  <MenuItem fx:id="Contract_Report" mnemonicParsing="false" text="Активные договоры" />
+                  <MenuItem fx:id="Orders_Report" mnemonicParsing="false" text="Заказы, заключенные за прошедший год" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Выход">
+               <items>
+                  <MenuItem fx:id="SignOut_MenuItem" mnemonicParsing="false" text="Выход из системы" />
+                  <MenuItem fx:id="Exit_MenuItem" mnemonicParsing="false" text="Выход из программы" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>

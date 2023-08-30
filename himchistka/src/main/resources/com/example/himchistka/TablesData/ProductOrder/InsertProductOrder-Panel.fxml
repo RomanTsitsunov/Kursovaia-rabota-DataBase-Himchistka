@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="330.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.TablesData.ProductOrder.InsertProductOrder">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #add8e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <children>
+                <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #808080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="Exit_Button" layoutX="43.0" layoutY="273.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Выйти" />
+                        <Button fx:id="Insert_Button" layoutX="196.0" layoutY="273.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Добавить" />
+                        <Label fx:id="InsertWarningEmptyField_Label" layoutX="1.0" layoutY="304.0" text="Пожалуйста, заполните все пустые поля!" textFill="#fc0000" visible="false">
+                            <font>
+                                <Font name="Times New Roman Italic" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="SuccessInsert_Label" layoutX="63.0" layoutY="304.0" text="Данные успешно добавлены" textFill="#00fa00" visible="false">
+                            <font>
+                                <Font name="Times New Roman Italic" size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="ErrorInsert_Label" layoutX="50.0" layoutY="304.0" text="Ошибка добавления данных" textFill="#fc0000" visible="false">
+                            <font>
+                                <Font name="Times New Roman Italic" size="18.0" />
+                            </font>
+                        </Label>
+                  <ComboBox fx:id="ProductType_ComboBox" layoutX="160.0" layoutY="12.0" prefHeight="25.0" prefWidth="132.0" />
+                  <TextField fx:id="Completeness_Field" layoutX="160.0" layoutY="181.0" prefHeight="25.0" prefWidth="132.0" promptText="Комплектность" />
+                  <TextField fx:id="Price_Field" editable="false" layoutX="160.0" layoutY="223.0" prefHeight="25.0" prefWidth="132.0" promptText="Цена" />
+                  <ComboBox fx:id="Material_ComboBox" layoutX="160.0" layoutY="94.0" prefHeight="25.0" prefWidth="132.0" />
+                  <ComboBox fx:id="Colour_ComboBox" layoutX="160.0" layoutY="52.0" prefHeight="25.0" prefWidth="132.0" />
+                  <ComboBox fx:id="Marking_ComboBox" layoutX="160.0" layoutY="137.0" prefHeight="25.0" prefWidth="132.0" />
+                  <Label layoutX="20.0" layoutY="15.0" text="Вид изделия" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="55.0" text="Цвет" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="97.0" text="Материал" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="140.0" text="Маркировка" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="184.0" text="Комплектность" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="19.0" layoutY="226.0" text="Цена" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </children></AnchorPane>
+        <Label layoutX="119.0" layoutY="14.0" text="Изделие" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

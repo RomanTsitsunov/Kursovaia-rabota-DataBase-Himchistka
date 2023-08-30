@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.TablesSpravochnici.ReceivingIssuingPoint.ReceivingIssuingPointController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #add8e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <TableView fx:id="Point_Table" editable="true" layoutX="179.0" layoutY="8.0" onMouseClicked="#cursor" prefHeight="200.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="IdPoint_Column" prefWidth="69.0" text="№ Пункта" />
+                        <TableColumn fx:id="City_Column" prefWidth="106.0" text="Город" />
+                  <TableColumn fx:id="Street_Column" prefWidth="151.0" text="Улица" />
+                  <TableColumn fx:id="House_Column" prefWidth="73.0" text="Дом" />
+                    </columns>
+                </TableView>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #808080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <TextField fx:id="City_Field" layoutX="36.0" layoutY="14.0" prefHeight="25.0" prefWidth="128.0" promptText="Город" />
+                        <Button fx:id="Exit_Button" layoutX="14.0" layoutY="251.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Выйти" />
+                        <Button fx:id="Refresh_Button" layoutX="14.0" layoutY="210.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Обновить" />
+                        <Button fx:id="Redact_Button" layoutX="54.0" layoutY="169.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Редактировать" />
+                        <Button fx:id="Insert_Button" layoutX="54.0" layoutY="129.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Добавить" />
+                  <TextField fx:id="Street_Field" layoutX="36.0" layoutY="52.0" prefHeight="25.0" prefWidth="128.0" promptText="Улица" />
+                  <TextField fx:id="House_Field" layoutX="36.0" layoutY="88.0" prefHeight="25.0" prefWidth="128.0" promptText="Дом" />
+                    </children>
+                </AnchorPane>
+            </children></AnchorPane>
+        <Label layoutX="30.0" layoutY="14.0" text="Пункты приема-выдачи" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

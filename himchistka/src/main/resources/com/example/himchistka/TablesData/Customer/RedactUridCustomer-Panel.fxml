@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="330.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.TablesData.Customer.RedactUridCustomerController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #add8e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <children>
+                <AnchorPane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #808080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="Exit_Button" layoutX="47.0" layoutY="399.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Выйти" />
+                        <TextField fx:id="Phone_Field" layoutX="93.0" layoutY="14.0" prefHeight="25.0" prefWidth="145.0" promptText="Телефон" />
+                        <TextField fx:id="Email_Field" layoutX="93.0" layoutY="52.0" prefHeight="25.0" prefWidth="145.0" promptText="E-Mail" />
+                        <TextField fx:id="OrganName_Field" layoutX="93.0" layoutY="91.0" prefHeight="25.0" prefWidth="145.0" promptText="Название организации" />
+                        <TextField fx:id="OGRN_Field" layoutX="93.0" layoutY="129.0" prefHeight="25.0" prefWidth="145.0" promptText="OGRN" />
+                        <TextField fx:id="KPP_Field" layoutX="93.0" layoutY="164.0" prefHeight="25.0" prefWidth="145.0" promptText="KPP" />
+                        <TextField fx:id="BIK_Field" layoutX="93.0" layoutY="199.0" prefHeight="25.0" prefWidth="145.0" promptText="BIK" />
+                        <TextField fx:id="INN_Field" layoutX="93.0" layoutY="237.0" prefHeight="25.0" prefWidth="145.0" promptText="INN" />
+                        <TextField fx:id="City_Field" layoutX="93.0" layoutY="276.0" prefHeight="25.0" prefWidth="145.0" promptText="Город" />
+                        <TextField fx:id="Street_Field" layoutX="93.0" layoutY="314.0" prefHeight="25.0" prefWidth="145.0" promptText="Улица" />
+                        <TextField fx:id="House_Field" layoutX="93.0" layoutY="349.0" prefHeight="25.0" prefWidth="145.0" promptText="Дом" />
+                  <Button fx:id="Redact_Button" layoutX="192.0" layoutY="399.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Редактировать" />
+                    </children>
+                </AnchorPane>
+            </children></AnchorPane>
+        <Label fx:id="Label" layoutX="98.0" layoutY="14.0" text="Заказчик №" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

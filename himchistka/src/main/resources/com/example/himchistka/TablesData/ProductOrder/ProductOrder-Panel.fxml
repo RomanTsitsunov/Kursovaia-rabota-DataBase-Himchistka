@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.TablesData.ProductOrder.ProductOrderController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #add8e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <TableView fx:id="Product_Table" editable="true" layoutX="268.0" layoutY="8.0" onMouseClicked="#cursor" prefHeight="400.0" prefWidth="1000.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="IdProduct_ColumnProduct" prefWidth="78.0" text="№ изделия" />
+                        <TableColumn fx:id="IdOrders_Column" prefWidth="68.0" text="№ заказа" />
+                        <TableColumn fx:id="ProductType_Column" prefWidth="88.0" text="Вид изделия" />
+                        <TableColumn fx:id="Colour_Column" minWidth="9.0" prefWidth="69.0" text="Цвет" />
+                        <TableColumn fx:id="Material_Column" prefWidth="98.0" text="Материал" />
+                        <TableColumn fx:id="Marking_Column" prefWidth="112.0" text="Маркировка" />
+                        <TableColumn fx:id="Completeness_Column" minWidth="0.0" prefWidth="103.0" text="Комплектность" />
+                        <TableColumn fx:id="Price_Column" minWidth="0.0" prefWidth="83.0" text="Цена" />
+                    </columns>
+                </TableView>
+                <AnchorPane minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #808080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="Exit_Button" layoutX="4.0" layoutY="481.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Выйти" />
+                        <Button fx:id="Refresh_Button" layoutX="4.0" layoutY="440.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Обновить" />
+                        <Button fx:id="Redact_Button" layoutX="55.0" layoutY="393.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Редактировать" />
+                        <Button fx:id="Insert_Button" layoutX="55.0" layoutY="350.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Добавить" />
+                        <ComboBox fx:id="ProductType_ComboBox" layoutX="35.0" layoutY="51.0" prefHeight="25.0" prefWidth="132.0" />
+                        <TextField fx:id="Completeness_Field" layoutX="35.0" layoutY="298.0" prefHeight="25.0" prefWidth="132.0" promptText="Комплектность" />
+                        <ComboBox fx:id="Material_ComboBox" layoutX="34.0" layoutY="183.0" prefHeight="25.0" prefWidth="132.0" />
+                        <ComboBox fx:id="Colour_ComboBox" layoutX="34.0" layoutY="116.0" prefHeight="25.0" prefWidth="132.0" />
+                        <ComboBox fx:id="Marking_ComboBox" layoutX="34.0" layoutY="248.0" prefHeight="25.0" prefWidth="132.0" />
+                  <Label fx:id="Redact_Label" layoutX="117.0" layoutY="582.0" prefHeight="20.0" prefWidth="139.0" text="Выберите изделие" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="Times New Roman Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="14.0" text="Вид изделия" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="85.0" text="Цвет" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="150.0" text="Материал" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="218.0" text="Маркировка" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+                <TabPane layoutX="296.0" layoutY="437.0" prefHeight="302.0" prefWidth="1000.0" style="-fx-background-color: #c0c0c0;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0">
+                    <tabs>
+                        <Tab text="Обработка изделия">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="1000.0">
+                                    <children>
+                                        <TableView fx:id="ProductProcessing_Table" editable="true" layoutX="13.0" prefHeight="365.0" prefWidth="937.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                                <TableColumn fx:id="IdProduct_ColumnProductProcessing" prefWidth="118.0" text="№ Изделия" />
+                                                <TableColumn fx:id="Service_Column" text="Услуга" />
+                                                <TableColumn fx:id="ConsumMaterial_Column" minWidth="0.0" prefWidth="142.0" text="Расходный материал" />
+                                                <TableColumn fx:id="AmountMaterials_Column" minWidth="9.0" prefWidth="243.0" text="Количество расходного материала" />
+                                            </columns>
+                                        </TableView>
+                                        <Button fx:id="ViewProductProcessing_Button" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="415.0" text="Посмотреть подробно процесс обработки изделия">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Загрязнение изделия">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TableView fx:id="ProductPollution_Table" editable="true" prefHeight="365.0" prefWidth="1075.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                                <TableColumn fx:id="IdProduct_ColumnProductPollution" prefWidth="118.0" text="№ Изделия" />
+                                                <TableColumn fx:id="Pollution_Column" prefWidth="109.0" text="Загрязнение" />
+                                            </columns>
+                                        </TableView>
+                                        <Button fx:id="ViewProductPollution_Button" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="415.0" text="Посмотреть подробно загрязнения изделия">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab text="Дефекты изделия">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="ProductDefect_Table" editable="true" prefHeight="365.0" prefWidth="1075.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="IdProduct_ColumnProductDefect" prefWidth="118.0" text="№ Изделия" />
+                                    <TableColumn fx:id="Defect_Column" prefWidth="109.0" text="Дефект" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="ViewProductDefect_Button" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="415.0" text="Посмотреть подробно дефекты изделия">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Фурнитура изделия">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="ProductAccessories_Table" editable="true" prefHeight="365.0" prefWidth="1075.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="IdProduct_ColumnProductAccessories" prefWidth="118.0" text="№ Изделия" />
+                                    <TableColumn fx:id="Accessories_Column" prefWidth="109.0" text="Фурнитура" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="ViewProductAccessories_Button" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="415.0" text="Посмотреть подробно фурнитуру изделия">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            </children></AnchorPane>
+        <Label layoutX="409.0" layoutY="14.0" text="Изделия" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

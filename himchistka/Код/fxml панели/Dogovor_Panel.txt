@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.LoginController">
+    <children>
+        <AnchorPane layoutY="112.0" prefHeight="374.0" prefWidth="600.0" style="-fx-background-color: #add8e6;">
+            <children>
+                <TextArea layoutX="14.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" text="поля - код договора, заказчика,&#10;ФИО, наименование, телефон,&#10;почта, кнопка - заполнить поля&#10;по коду заказчика -&#10;автоматически заполнятся.&#10;В зависимости от типа&#10;заказчика, будут автоматически&#10;меняться поля, отображать все&#10;поля для данного типа.&#10;" />
+                <TextArea layoutX="386.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" text="Здесь будет перечень&#10;прилагающихся заказов, их&#10;можно будет добавлять, удалять&#10;редактировать - будут&#10;открываться окна добавления,&#10;редактирования и удаления&#10;как для окон - оформление&#10;заказа.&#10;Можно посмотреть список&#10;всех прилагающихся заказов" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="174.0" layoutY="23.0" prefWidth="253.0" text="Оформление договора" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

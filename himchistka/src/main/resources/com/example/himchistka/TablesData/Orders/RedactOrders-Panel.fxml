@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="330.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.TablesData.Orders.RedactOrdersController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #add8e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+            <children>
+                <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #808080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="Exit_Button" layoutX="43.0" layoutY="477.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Выйти" />
+                        <ComboBox fx:id="Employer_ComboBox" layoutX="169.0" layoutY="14.0" prefHeight="25.0" prefWidth="132.0" />
+                        <TextField fx:id="DateBeginOrders_Field" layoutX="169.0" layoutY="305.0" prefHeight="25.0" prefWidth="132.0" promptText="Дата принятия" />
+                        <TextField fx:id="DateReadyOrders_Field" layoutX="169.0" layoutY="348.0" prefHeight="25.0" prefWidth="132.0" promptText="Дата готовности" />
+                        <TextField fx:id="Sum_Field" layoutX="169.0" layoutY="223.0" prefHeight="25.0" prefWidth="132.0" promptText="Сумма" />
+                        <TextField fx:id="PaidSum_Field" layoutX="169.0" layoutY="265.0" prefHeight="25.0" prefWidth="132.0" promptText="Оплаченная сумма" />
+                        <TextField fx:id="DateIssueOrders_Field" layoutX="169.0" layoutY="390.0" prefHeight="25.0" prefWidth="132.0" promptText="Дата выдачи" />
+                        <ComboBox fx:id="IdReceivingPoint_ComboBox" layoutX="169.0" layoutY="96.0" prefHeight="25.0" prefWidth="132.0" />
+                        <ComboBox fx:id="UrgencyOrders_ComboBox" layoutX="169.0" layoutY="54.0" prefHeight="25.0" prefWidth="132.0" />
+                        <ComboBox fx:id="StatusOrders_ComboBox" layoutX="169.0" layoutY="181.0" prefHeight="25.0" prefWidth="132.0" />
+                        <ComboBox fx:id="IdIssuingPoint_ComboBox" layoutX="169.0" layoutY="139.0" prefHeight="25.0" prefWidth="132.0" />
+                        <Label layoutX="29.0" layoutY="17.0" text="Сотрудник" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="57.0" text="Срочность" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="101.0" text="№ пункта приема" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="143.0" text="№ пункта выдачи" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="183.0" text="Статус" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                  <Button fx:id="Redact_Button" layoutX="189.0" layoutY="477.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Редактировать" />
+                  <Label layoutX="28.0" layoutY="226.0" text="Сумма" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="268.0" text="Оплаченная сумма" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="308.0" text="Дата принятия" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="351.0" text="Дата готовности" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="391.0" text="Дата выдачи" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </children></AnchorPane>
+        <Label fx:id="Label" layoutX="117.0" layoutY="14.0" text="Заказ №" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

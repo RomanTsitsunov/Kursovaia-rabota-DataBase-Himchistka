@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.LoginController">
+    <children>
+        <AnchorPane layoutY="112.0" prefHeight="374.0" prefWidth="600.0" style="-fx-background-color: #add8e6;">
+            <children>
+                <TextArea layoutX="14.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" text="Поля - код заказа и все&#10;остальные поля.&#10;использовать выпадающие&#10;списки для внешних ключей&#10;&#10;" />
+                <TextArea layoutX="386.0" layoutY="14.0" prefHeight="163.0" prefWidth="200.0" text="Здесь будет перечень&#10;прилагающихся платежей, их&#10;можно будет добавлять, удалять&#10;редактировать - будут&#10;открываться окна добавления,&#10;редактирования и удаления&#10;как для окон - платежи.&#10;Посмотреть все платежи." />
+            <TextArea layoutX="386.0" layoutY="197.0" prefHeight="163.0" prefWidth="200.0" text="Здесь будет перечень&#10;прилагающихся изделий, их&#10;можно будет добавлять, удалять&#10;редактировать - будут&#10;открываться окна добавления,&#10;редактирования и удаления&#10;как для окон - изделия.&#10;Посмотреть все изделия." />
+            </children>
+        </AnchorPane>
+        <Label layoutX="174.0" layoutY="23.0" prefWidth="253.0" text="Оформление заказа" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

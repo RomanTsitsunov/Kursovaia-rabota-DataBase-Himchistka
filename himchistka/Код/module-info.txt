@@ -1,0 +1,12 @@
+module com.example.himchistka {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires java.sql;
+    requires mysql.connector.j;
+
+
+    opens com.example.himchistka to javafx.fxml;
+    exports com.example.himchistka;
+    exports com.example.himchistka.controller;
+    opens com.example.himchistka.controller to javafx.fxml;
+}

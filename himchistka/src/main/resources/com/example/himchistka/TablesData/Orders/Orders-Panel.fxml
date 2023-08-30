@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1250.0" style="-fx-background-color: #008080;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.himchistka.controller.TablesData.Orders.OrdersController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #add8e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <TableView fx:id="Orders_Table" editable="true" layoutX="268.0" layoutY="8.0" onMouseClicked="#cursor" prefHeight="400.0" prefWidth="1000.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="IdOrders_ColumnOrders" prefWidth="60.0" text="№ заказа" />
+                        <TableColumn fx:id="IdContract_Column" prefWidth="77.0" text="№ договора" />
+                        <TableColumn fx:id="Employer_Column" prefWidth="68.0" text="Сотрудник" />
+                  <TableColumn fx:id="UrgencyOrders_Column" minWidth="9.0" prefWidth="75.0" text="Срочность" />
+                  <TableColumn fx:id="IdReceivingPoint_Column" prefWidth="111.0" text="№ пункта приема" />
+                  <TableColumn fx:id="IdIssuingPoint_Column" prefWidth="112.0" text="№ пункта выдачи" />
+                  <TableColumn fx:id="StatusOrders_Column" minWidth="0.0" prefWidth="45.0" text="Статус" />
+                  <TableColumn fx:id="SumOrders_Column" prefWidth="47.0" text="Сумма" />
+                  <TableColumn fx:id="PaidSum_Column" prefWidth="120.0" text="Оплаченная сумма" />
+                  <TableColumn fx:id="DateBeginOrders_Column" prefWidth="78.0" text="Дата принятия" />
+                  <TableColumn fx:id="DateReadyOrders_Column" prefWidth="83.0" text="Дата готовности" />
+                  <TableColumn fx:id="DateIssueOrders_Column" prefWidth="73.0" text="Дата выдачи" />
+                    </columns>
+                </TableView>
+                <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #808080;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <TextField fx:id="IdOrders_Field" layoutX="154.0" layoutY="14.0" prefHeight="25.0" prefWidth="132.0" promptText="№ Заказа" />
+                        <Button fx:id="Exit_Button" layoutX="14.0" layoutY="660.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Выйти" />
+                        <Button fx:id="Refresh_Button" layoutX="14.0" layoutY="619.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Обновить" />
+                        <Button fx:id="Redact_Button" layoutX="14.0" layoutY="582.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Редактировать" />
+                        <Button fx:id="Insert_Button" layoutX="14.0" layoutY="544.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="92.0" text="Добавить" />
+                        <ComboBox fx:id="Employer_ComboBox" layoutX="154.0" layoutY="98.0" prefHeight="25.0" prefWidth="132.0" />
+                        <ComboBox fx:id="IdContract_ComboBox" layoutX="154.0" layoutY="56.0" prefHeight="25.0" prefWidth="132.0" />
+                  <TextField fx:id="DateBeginOrders_Field" layoutX="154.0" layoutY="389.0" prefHeight="25.0" prefWidth="132.0" promptText="Дата принятия" />
+                  <TextField fx:id="DateReadyOrders_Field" layoutX="154.0" layoutY="432.0" prefHeight="25.0" prefWidth="132.0" promptText="Дата готовности" />
+                  <TextField fx:id="Sum_Field" layoutX="154.0" layoutY="307.0" prefHeight="25.0" prefWidth="132.0" promptText="Сумма" />
+                  <TextField fx:id="PaidSum_Field" editable="false" layoutX="154.0" layoutY="349.0" prefHeight="25.0" prefWidth="132.0" promptText="Оплаченная сумма" />
+                  <TextField fx:id="DateIssueOrders_Field" layoutX="154.0" layoutY="474.0" prefHeight="25.0" prefWidth="132.0" promptText="Дата выдачи" />
+                  <ComboBox fx:id="IdReceivingPoint_ComboBox" layoutX="154.0" layoutY="180.0" prefHeight="25.0" prefWidth="132.0" />
+                  <ComboBox fx:id="UrgencyOrders_ComboBox" layoutX="154.0" layoutY="138.0" prefHeight="25.0" prefWidth="132.0" />
+                  <ComboBox fx:id="StatusOrders_ComboBox" layoutX="154.0" layoutY="265.0" prefHeight="25.0" prefWidth="132.0" />
+                  <ComboBox fx:id="IdIssuingPoint_ComboBox" layoutX="154.0" layoutY="223.0" prefHeight="25.0" prefWidth="132.0" />
+                  <Button fx:id="Search_Button" layoutX="104.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Найти" />
+                  <Label layoutX="14.0" layoutY="59.0" text="№ договора" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="101.0" text="Сотрудник" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="141.0" text="Срочность" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="185.0" text="№ пункта приема" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="227.0" text="№ пункта выдачи" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="267.0" text="Статус" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="309.0" text="Сумма" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="349.0" text="Оплаченная сумма" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="392.0" text="Дата принятия" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="435.0" text="Дата готовности" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="475.0" text="Дата выдачи" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="17.0" text="№ Заказа" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+                <TabPane layoutX="296.0" layoutY="437.0" prefHeight="302.0" prefWidth="1000.0" style="-fx-background-color: #c0c0c0;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0">
+                    <tabs>
+                        <Tab text="Изделия">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="1000.0">
+                                    <children>
+                                        <TableView fx:id="Product_Table" editable="true" layoutX="13.0" prefHeight="365.0" prefWidth="937.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                                <TableColumn fx:id="IdProduct_Column" prefWidth="88.0" text="№ Изделия" />
+                                                <TableColumn fx:id="IdOrders_ColumnProduct" prefWidth="112.0" text="№ Заказа" />
+                                                <TableColumn fx:id="ProductType_Column" minWidth="0.0" prefWidth="88.0" text="Вид изделия" />
+                                                <TableColumn fx:id="Colour_Column" minWidth="9.0" prefWidth="81.0" text="Цвет" />
+                                                <TableColumn fx:id="Material_Column" prefWidth="84.0" text="Материал" />
+                                                <TableColumn fx:id="Marking_Column" prefWidth="103.0" text="Маркировка" />
+                                                <TableColumn fx:id="Completeness_Column" minWidth="0.0" prefWidth="123.0" text="Комплектность" />
+                                                <TableColumn fx:id="Price_Column" prefWidth="62.0" text="Цена" />
+                                            </columns>
+                                        </TableView>
+                                        <Button fx:id="ViewProduct_Button" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="415.0" text="Посмотреть подробно прилагающиеся изделия">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab text="Платежи">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="Payment_Table" editable="true" prefHeight="365.0" prefWidth="1075.0" style="-fx-background-color: #dcdcdc;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="IdPayment_Column" prefWidth="109.0" text="№ Платежа" />
+                                    <TableColumn fx:id="IdOrders_ColumnPayment" prefWidth="109.0" text="№ Заказа" />
+                                    <TableColumn fx:id="DatePayment_Column" minWidth="0.0" prefWidth="91.0" text="Дата платежа" />
+                                    <TableColumn fx:id="SumPayment_Column" minWidth="9.0" prefWidth="107.0" text="Сумма" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="ViewPayment_Button" layoutX="14.0" layoutY="230.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="415.0" text="Посмотреть подробно прилагающиеся платежи">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            </children></AnchorPane>
+        <Label layoutX="547.0" layoutY="14.0" text="Заказы" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="48.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
